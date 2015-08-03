@@ -14,6 +14,8 @@
 		24C339CD1B6D2249005310CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24C339CC1B6D2249005310CB /* Images.xcassets */; };
 		24C339D01B6D2249005310CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C339CE1B6D2249005310CB /* LaunchScreen.xib */; };
 		24C339DC1B6D2249005310CB /* iPhoneContacts_tutorialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24C339DB1B6D2249005310CB /* iPhoneContacts_tutorialTests.m */; };
+		24C339E61B6D2404005310CB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C339E51B6D2404005310CB /* AddressBook.framework */; };
+		24C339E81B6D240C005310CB /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24C339E71B6D240C005310CB /* AddressBookUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		24C339D51B6D2249005310CB /* iPhoneContacts_tutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iPhoneContacts_tutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		24C339DA1B6D2249005310CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24C339DB1B6D2249005310CB /* iPhoneContacts_tutorialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iPhoneContacts_tutorialTests.m; sourceTree = "<group>"; };
+		24C339E51B6D2404005310CB /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		24C339E71B6D240C005310CB /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C339E81B6D240C005310CB /* AddressBookUI.framework in Frameworks */,
+				24C339E61B6D2404005310CB /* AddressBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		24C339B31B6D2249005310CB = {
 			isa = PBXGroup;
 			children = (
+				24C339E71B6D240C005310CB /* AddressBookUI.framework */,
+				24C339E51B6D2404005310CB /* AddressBook.framework */,
 				24C339BE1B6D2249005310CB /* iPhoneContacts_tutorial */,
 				24C339D81B6D2249005310CB /* iPhoneContacts_tutorialTests */,
 				24C339BD1B6D2249005310CB /* Products */,
@@ -168,6 +176,7 @@
 				TargetAttributes = {
 					24C339BB1B6D2249005310CB = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = YK6Z6JP72P;
 					};
 					24C339D41B6D2249005310CB = {
 						CreatedOnToolsVersion = 6.4;
@@ -349,9 +358,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iPhoneContacts_tutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -359,9 +371,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = iPhoneContacts_tutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -418,6 +433,7 @@
 				24C339E11B6D2249005310CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24C339E21B6D2249005310CB /* Build configuration list for PBXNativeTarget "iPhoneContacts_tutorialTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +442,7 @@
 				24C339E41B6D2249005310CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

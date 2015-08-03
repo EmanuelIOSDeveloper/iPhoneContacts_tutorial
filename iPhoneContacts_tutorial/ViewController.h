@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AddressBook/AddressBook.h>
+#import <AddressBookUI/AddressBookUI.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ABPeoplePickerNavigationControllerDelegate>
 
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *contactImageView;
+
+- (IBAction)openContacts:(id)sender;
 
 @end
 

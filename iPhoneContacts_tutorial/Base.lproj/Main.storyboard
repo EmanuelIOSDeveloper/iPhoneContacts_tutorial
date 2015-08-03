@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +15,84 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olo-MJ-zD2">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aH-h0-i6c">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Contact Name"/>
+                                <connections>
+                                    <action selector="openContacts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZDv-Zv-xcM"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ioa-B5-knz">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="0E4-9x-xdc"/>
+                                    <constraint firstAttribute="height" constant="220" id="CaA-mc-0BX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0E4-9x-xdc"/>
+                                        <exclude reference="CaA-mc-0BX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0E4-9x-xdc"/>
+                                        <include reference="CaA-mc-0BX"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="9aH-h0-i6c" secondAttribute="centerX" id="30T-fc-EdG"/>
+                            <constraint firstItem="olo-MJ-zD2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="3ZG-6k-2ls"/>
+                            <constraint firstItem="Ioa-B5-knz" firstAttribute="top" secondItem="9aH-h0-i6c" secondAttribute="bottom" constant="50" id="IBl-Dh-hhF"/>
+                            <constraint firstItem="9aH-h0-i6c" firstAttribute="top" secondItem="olo-MJ-zD2" secondAttribute="bottom" constant="50" id="USn-or-zkK"/>
+                            <constraint firstAttribute="centerX" secondItem="Ioa-B5-knz" secondAttribute="centerX" id="tbT-Ph-7zw"/>
+                            <constraint firstAttribute="centerX" secondItem="olo-MJ-zD2" secondAttribute="centerX" id="vzp-Ev-GUv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="olo-MJ-zD2"/>
+                                <exclude reference="9aH-h0-i6c"/>
+                                <exclude reference="Ioa-B5-knz"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3ZG-6k-2ls"/>
+                                <exclude reference="vzp-Ev-GUv"/>
+                                <exclude reference="30T-fc-EdG"/>
+                                <exclude reference="USn-or-zkK"/>
+                                <exclude reference="IBl-Dh-hhF"/>
+                                <exclude reference="tbT-Ph-7zw"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="olo-MJ-zD2"/>
+                                <include reference="9aH-h0-i6c"/>
+                                <include reference="Ioa-B5-knz"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3ZG-6k-2ls"/>
+                                <include reference="vzp-Ev-GUv"/>
+                                <include reference="30T-fc-EdG"/>
+                                <include reference="USn-or-zkK"/>
+                                <include reference="IBl-Dh-hhF"/>
+                                <include reference="tbT-Ph-7zw"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="contactImageView" destination="Ioa-B5-knz" id="O9E-b5-Src"/>
+                        <outlet property="nameLabel" destination="olo-MJ-zD2" id="cUp-6P-i5t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
